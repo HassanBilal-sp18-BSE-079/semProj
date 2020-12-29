@@ -1,0 +1,28 @@
+extends ../layout
+
+
+block content
+    .row
+        .col-md-6
+            h1 Product List
+        .col-md-6
+            a(href="/products/add" class="btn btn-primary") Add Item
+        table.table.table-dark.table-striped
+            thead
+                tr
+                    th Game Name
+                    th Game Price
+                    th Genre
+                    th Company
+                    th Custom Details
+            tbody
+                each product in products
+                    tr 
+                        td=product.name
+                        td=product.price
+                        td=product.city
+                        td=product.location
+                        td=product.detail
+                        td  
+                            a(href="/products/delete/"+product._id    class="btn btn-danger") Remove
+                            a(href="/products/edit/"+product._id    class="btn btn-info") Update

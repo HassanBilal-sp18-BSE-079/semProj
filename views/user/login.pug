@@ -1,0 +1,14 @@
+extends ../layout
+
+
+block content
+    h1 Login
+    form(action="/login", method="post")
+        div(class="form-group")
+            lable(for="email") Email
+            input(type="text" ,class="form-control" ,id="email" ,name="email")
+        div(class="form-group")
+            lable(for="password") Password
+            input(type="password" ,class="form-control" ,id="password" ,name="password")
+        input(type="submit" ,class="btn btn-primary")
+    

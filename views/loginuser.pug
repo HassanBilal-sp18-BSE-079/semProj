@@ -1,0 +1,29 @@
+extend layouts/master
+
+block contents
+    .container-fluid
+      .row
+        .col-sm-6
+          h4 CUSTOMER LOGIN
+          br
+          p REGISTERED CUSTOMERS
+          hr
+          p(style='font-size: small;') If you have an account, sign in with your email address
+          form
+            .form-group
+            label(for='email' style='font-weight: 500; font-size: small;') Email:
+            input#email.form-control(type='email' placeholder='Enter email' name='email' style='font-size: small;')
+            .form-group
+            label(for='pwd' style='font-weight: 500; font-size: small;') Password:
+            input#pwd.form-control(type='password' placeholder='Enter password' name='pwd' style='font-size: small;')
+          p
+          button.btn.btn-outline-dark(type='submit' onclick="window.location.href='#';") SIGNIN
+          a(href='#' style='color: black; font-size: small;') Forgot your password?
+        .col-sm-6
+            h4
+            br
+            br
+            p Admin Panel
+            hr
+            br
+            button.btn.btn-outline-dark(type='submit' onclick="window.location.href='/user';") Admin login

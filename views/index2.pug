@@ -1,0 +1,20 @@
+extends layout2
+
+block content   
+    <p class="a">
+        <div class="container">
+            <img src="images/logo.png" alt="J." class="mx-auto d-block" width="150px" height="150px">
+            <button type="button" id="btn1" class="btn btn-outline-dark dropdown-toggle mx-auto b-block" data-toggle="dropdown">Select Country</button>
+            <div class="dropdown-menu" style="width:40%">
+                <div class="dropdown-item">Pakistan</div>
+                <div class="dropdown-item">Australia</div>
+                <div class="dropdown-item">New Zealand</div>
+                <div class="dropdown-item">United Kingdom</div>
+                <div class="dropdown-item">United States</div>
+                <div class="dropdown-item">Canada</div>
+                <div class="dropdown-item">South Africa</div>
+                <div class="dropdown-item">Rest of the World</div>
+            </div>
+            <button type="button" id="btn2" class="btn btn-outline-dark mx-auto b-block" onclick="window.location.href='/home'">ENTER</button>
+        </div>
+    </p>

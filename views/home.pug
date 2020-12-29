@@ -1,0 +1,97 @@
+extend layouts/master
+
+block contents
+    <div id="demo" class="container-fluid carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner mx-2" style="margin-top: 2%">
+        <div class="carousel-item active">
+          <img src="images/wp5825925.jpg" alt="Groom" width="1300" height="550" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/thumb-1920-897232.jpg" alt="banner" width="1300" height="550" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/banner_21.png" alt="1" width="1300" height="550" />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <!-- body -->
+    <div class="container mt-5" id="imgtxt">
+      <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-3">
+      <a href="#"><img src="images/home1.jpg" style="width: 370px; height: 550px;" /></a>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-3 mt-5">
+      <a href="#"><img src="images/home2.jpeg" style="width: 300px; height: 450px;"> </a>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    <div class="text-block">
+    <pre ><h4 style="font-size: 55px">      Witcher 3 <br>WildHunt</h4></pre>
+    <pre style="font-size: 20px;">      Geralt of Rivia <br>Butcher of Blaviken</pre>
+    </div>
+    </div>
+
+    <div class="container mt-5" id="imgtxt">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3 mt-5">
+      <a href="#"><img src="images/home4.jpg" style="width: 300px; height: 450px;"> </a>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+      <a href="#"><img src="images/home3.jpg" style="width: 370px; height: 550px;" /></a>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    <div class="text-block2">
+    <h4 style="font-size: 55px">Age of Empire 3</h4>
+    <p style="font-size: 20px;">The war Chiefs.</p>
+    </div>
+    </div>
+
+    <div class="container mt-5" id="imgtxt">
+    <div class="d-flex p-5 bg-light">
+    <a href="#"><img src="images/banner_21.png" style="height: 400px; width: 1000px;"> </a>
+    <div class="text-block3">
+    <h1 style="font-size: 60px;">Cyberpunk 2077</h1>
+    <pre style="font-size: 20px;">               <a href="#" style="color: black;">Out Now!</a></pre>
+    </div>
+    </div>
+    </div>
+    <br><br><br><br><br>
+    .container
+      .row
+        .col-md-10
+            h1 Product List
+        table.table.table-dark.table-striped
+            thead
+                tr
+                    th Game Name
+                    th Game Price
+                    th Genre
+                    th Company
+                    th Custom Details
+            tbody
+                each product in products
+                    tr 
+                        td=product.name
+                        td=product.price
+                        td=product.city
+                        td=product.location
+                        td=product.detail
+                        td  
+                            a(href="/cart/"+product._id    class="btn btn-info ml-3") Add To Cart

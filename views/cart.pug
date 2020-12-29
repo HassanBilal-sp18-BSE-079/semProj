@@ -1,0 +1,29 @@
+extend layouts/master
+
+block contents    
+    h1 My Shopping cart
+    - var total=0
+    table(class="table") 
+        thead 
+            tr  
+                th Game Name
+                th Game Price
+                th Genre
+                th Company
+                th Custom Details
+                th Actions
+        each item in cart
+            - total += Number(item.price)
+            tbody
+                tr
+                    td=item.name        
+                    td=item.price
+                    td=item.city
+                    td=item.location
+                    td=item.detail
+                    td
+                        a(href="cart/remove/"+item._id ,class="btn btn-danger") Remove
+        tfoot
+            tr
+                th Total        
+                th=total      
